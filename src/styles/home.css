@@ -1,0 +1,577 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #E5FFFE;
+}
+body {
+  font-family: 'Inter', sans-serif; /* Default font for the body */
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; /* Use Inter for headings */
+  color: #001918;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for paragraphs */
+  color: #006461;
+}
+
+header {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: relative; /* Allows positioning of nav-links */
+}
+
+/* Logo Styles */
+.logo {
+  order: 0;
+}
+.logo img {
+  height: 40px; /* Adjust size as needed */
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2; /* Ensure it's above the nav-links */
+}
+.social-links a{
+  text-decoration: none;
+  color: linear-gradient(45deg, #00C9C2, #006461);
+  font-size: 24px;
+}
+/* Hide nav-links by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #006461; 
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.links i {
+  background: linear-gradient( #00C9C2, #006461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+/* Show nav-links when active */
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a {
+  width: 100px;
+  background:linear-gradient(45deg, #E5FFFE, #99FDFA);
+  color: #006461;
+  text-decoration: none; 
+  padding: 10px; 
+  border-radius: 8px; 
+  font-size: 16px; 
+  font-weight: bold;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  border: 1px solid transparent; 
+}
+
+
+/* Media Query for Mobile Portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    margin-right: auto;
+    order: 1;
+  }
+
+  .hamburger-menu {
+    order: 2;
+  }
+
+    /* Social Links Section */
+  .social-links {
+    display: none; /* Optionally hide on smaller screens */
+  }
+}
+
+/* Media Query for Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 1; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+}
+/* tablet */
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 3; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 3; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+}
+
+
+
+
+/* Target Desktops (min-width 1024px) */
+@media (min-width: 1024px) {
+  .links{
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .nav-links {
+    display: flex; 
+    flex-direction: row;
+    gap: 5em;
+    position: static; /* Reset positioning for desktop */
+    background-color: transparent; /* Remove mobile background */
+    padding: 0; /* Remove extra padding */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  .nav-links a {
+    width: auto; /* Adjust for horizontal layout */
+    background-color: transparent; /* No background for desktop */
+    color: #333;
+    padding: 0; /* Remove padding for desktop links */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: none; /* Remove border for desktop */
+    transition: color 0.3s;
+    flex-grow: 1;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+ 
+}
+
+
+
+
+
+/* Main Section */
+.main-section {
+  text-align: center;
+  padding: 1em;
+  /* overflow:scroll; */
+}
+
+.about-me {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center image and description */
+  gap: 20px; /* Space between image and description */
+  max-width: 900px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.profile-image {
+  width: 18em; /* Set a fixed width for the image */
+  height: 19em; /* Set a fixed height for the image */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensure image covers the entire circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.about-description h1 {
+  font-size: 1.5em;
+}
+.about-description {
+  width: 90%; /* Set the width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.about-description h1,
+.about-description p,
+.about-description span {
+  width: 100%;
+  box-sizing: border-box; 
+  display: block; 
+  
+}
+.about-description span{
+  color: #006461;
+}
+
+
+
+.about-description {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column; /* Stack image and description vertically */
+    text-align: center; /* Center text on smaller screens */
+    align-items: center;
+  }
+
+  .about-description h1 {
+    font-size: 1.5em;
+  }
+  .about-description {
+    width: 90%; /* Set the width of the container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  .about-description h1,
+  .about-description p,
+  .about-description span {
+    width: 100%;
+    box-sizing: border-box; 
+    display: block; 
+  }
+  
+  
+  
+  .about-description {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the left */
+  }
+  
+  
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8px;
+    box-shadow: 1px 13px 14px #006461;;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape){
+  body {
+    padding-bottom: 40px; /* Adjust this value to the footer's height + some extra padding if needed */
+}
+
+.about-description {
+  width: 90%; /* Set the width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.about-description h1,
+.about-description p,
+.about-description span {
+  width: 100%;
+  box-sizing: border-box; 
+  display: block; 
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+  footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8px;
+  }
+
+}
+/* tablet */
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+  .about-me {
+    flex-direction: column; /* Stack image and description vertically */
+    text-align: center; /* Center text on smaller screens */
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 32em; /* Set a fixed width for the image */
+    height: 32em; /* Set a fixed height for the image */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure image covers the entire circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .about-description h1 {
+    font-size: 2.8em;
+  }
+  
+  .about-description {
+    width: 90%; /* Set the width of the container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+  
+  .about-description h1,
+  .about-description p,
+  .about-description span {
+    width: 100%;
+    box-sizing: border-box; 
+    display: block; 
+  }
+  
+  .about-description span,
+  .about-description p{
+    font-size: 1.5em;
+  }
+  .about-description {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the left */
+  }
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 1px 13px 14px #006461;;
+  }
+  
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape){
+  body {
+    padding-bottom: 40px; /* Adjust this value to the footer's height + some extra padding if needed */
+}
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 4em;
+}
+
+.profile-image {
+  width: 28em;
+  height: 28em;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-description {
+  width: 100%; /* Set the width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.about-description h1,
+.about-description p,
+.about-description span {
+  width: 100%;
+  box-sizing: border-box; 
+  display: block; 
+}
+
+.about-description h1{
+  font-size: 1.9em;
+  width: 100%;
+}
+
+.about-description p,
+.about-description span{
+  font-size: 1.4em;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+/* 
+desktop */
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 40px; /* Adjust this value to the footer's height + some extra padding if needed */
+}
+
+.main-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+about-me {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 4em;
+}
+
+.profile-image {
+  width: 28em;
+  height: 28em;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-description {
+  width: 100%; /* Set the width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.about-description h1,
+.about-description p,
+.about-description span {
+  width: 100%;
+  box-sizing: border-box; 
+  display: block; 
+}
+
+.about-description h1{
+  font-size: 2em;
+  width: 100%;
+}
+
+.about-description p,
+.about-description span{
+  font-size: 1.4em;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+}
