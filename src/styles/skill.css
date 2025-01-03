@@ -1,0 +1,532 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E5FFFE;
+  }
+  body {
+    font-family: 'Inter', sans-serif; /* Default font for the body */
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Use Inter for headings */
+    color: #001918;
+  }
+  
+  p {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat for paragraphs */
+    color: #006461;
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative; /* Allows positioning of nav-links */
+  }
+  
+  /* Logo Styles */
+  .logo {
+    order: 0;
+  }
+  .logo img {
+    height: 40px; /* Adjust size as needed */
+  }
+  
+  /* Hamburger Menu Styles */
+  .hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's above the nav-links */
+  }
+  .social-links a{
+    text-decoration: none;
+    color: linear-gradient(45deg, #00C9C2, #006461);
+    font-size: 24px;
+  }
+  /* Hide nav-links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #006461; 
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .links i {
+    background: linear-gradient( #00C9C2, #006461);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+  
+  /* Show nav-links when active */
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .nav-links a {
+    width: 100px;
+    background:linear-gradient(45deg, #E5FFFE, #99FDFA);
+    color: #006461;
+    text-decoration: none; 
+    padding: 10px; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    border: 1px solid transparent; 
+  }
+  main{
+    margin: 0 1em;
+  }
+  .skills-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-bg{
+    background: linear-gradient(45deg, #33FCF5, #006461);
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .skill-item img{
+    width: 3em;
+  }
+
+  .skill-item p{
+    color: #001918;
+    font-weight: 900;
+  }
+
+  .skill-item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .skills-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .language-bg p{
+    background: linear-gradient(45deg, #33FCF5, #006461);
+    margin: 3px 0;
+    padding: 10px;
+    color: #001918;
+    font-weight: 900;
+
+  }
+  body {
+    padding-bottom: 25px; /* Adjust this value to the footer's height + some extra padding if needed */
+}
+  
+  /* Media Query for Mobile Portrait */
+  @media (max-width: 768px) and (orientation: portrait) {
+    .header-container {
+      flex-wrap: nowrap;
+    }
+  
+    .logo {
+      margin-right: auto;
+      order: 1;
+    }
+  
+    .hamburger-menu {
+      order: 2;
+    }
+  
+      /* Social Links Section */
+    .social-links {
+      display: none; /* Optionally hide on smaller screens */
+    }
+  
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 8px;
+      box-shadow: 1px 13px 14px #006461;;
+    }
+  }
+  
+  /* Media Query for Mobile Landscape */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .header-container {
+      display: flex;
+      justify-content: space-between; /* Distribute space between items */
+      align-items: center;
+      width: 100%;
+    }
+  
+    .logo {
+      order: 0; /* Logo comes first */
+      margin-right: auto; /* Push logo to the left */
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin: 0 auto; /* Center social links horizontally */
+  
+    }
+  
+    .hamburger-menu {
+      display: block;
+      order: 1; /* Hamburger comes last (on the right) */
+      margin-left: auto; /* Push hamburger to the right */
+    }
+  
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+    }
+  
+  }
+  /* tablet */
+  @media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+    .header-container {
+      display: flex;
+      justify-content: space-between; /* Distribute space between items */
+      align-items: center;
+      width: 100%;
+    }
+  
+    .logo {
+      order: 0; /* Logo comes first */
+      margin-right: auto; /* Push logo to the left */
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin: 0 auto; /* Center social links horizontally */
+  
+    }
+  
+    .hamburger-menu {
+      display: block;
+      order: 3; /* Hamburger comes last (on the right) */
+      margin-left: auto; /* Push hamburger to the right */
+    }
+  
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+      box-shadow: 1px 13px 14px #006461;;
+    }
+  
+  }
+  
+  
+  @media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape) {
+    .header-container {
+      display: flex;
+      justify-content: space-between; /* Distribute space between items */
+      align-items: center;
+      width: 100%;
+    }
+  
+    .logo {
+      order: 0; /* Logo comes first */
+      margin-right: auto; /* Push logo to the left */
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin: 0 auto; /* Center social links horizontally */
+  
+    }
+  
+    .hamburger-menu {
+      display: block;
+      order: 3; /* Hamburger comes last (on the right) */
+      margin-left: auto; /* Push hamburger to the right */
+    }
+  
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  
+  /* Target Desktops (min-width 1024px) */
+  @media (min-width: 1024px) {
+    .links{
+      display: flex;
+      flex-grow: 1;
+    }
+  
+    .nav-links {
+      display: flex; 
+      flex-direction: row;
+      gap: 5em;
+      position: static; /* Reset positioning for desktop */
+      background-color: transparent; /* Remove mobile background */
+      padding: 0; /* Remove extra padding */
+      box-shadow: none; /* Remove shadow */
+    }
+  
+    .nav-links a {
+      width: auto; /* Adjust for horizontal layout */
+      background-color: transparent; /* No background for desktop */
+      color: #333;
+      padding: 0; /* Remove padding for desktop links */
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      border: none; /* Remove border for desktop */
+      transition: color 0.3s;
+      flex-grow: 1;
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin: 0 auto; /* Center social links horizontally */
+  
+    }
+  
+    .hamburger-menu {
+      display: none;
+    }
+  
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+   
+  }
+
+
+
+
+  @media (max-width: 768px) and (orientation: landscape){
+
+    .skill-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 4em;
+        padding: 20px;
+        height: 85vh;
+
+    }
+
+    .language-bg{
+        position: absolute;
+        right: 1em;
+        left: 26em;
+        bottom: -17.5em;
+    }
+
+    .language-bg p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18.5em;
+    }
+
+  }
+  
+  @media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+    main{
+        margin: 1em 2em;
+    }
+   
+
+    .skills-section section{
+        height: 100%;
+    }
+    .skill-bg{
+        height: 90%;
+    }
+    .skills-list div{
+        flex-grow: 1;
+    }
+    .skill-item img {
+        width: 7em;
+    }
+    .skill-item p {
+        font-size: 1.7em;
+    }
+ 
+
+
+
+    .skill-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 4em;
+        padding: 20px;
+        height: 85vh;
+
+    }
+
+    .language-bg{
+        position: absolute;
+        right: 1em;
+        left: 27.2em;
+        bottom: 5.5em;
+    }
+
+    .language-bg p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15.7em;
+        padding: 1.4em;
+    }
+
+  }
+
+
+  @media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape){
+    body {
+        padding-bottom: 40px; /* Adjust this value to the footer's height + some extra padding if needed */
+    }
+    main{
+        margin: 1em 2em;
+    }
+   
+    .skill-row{
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill-item img {
+        width: 5em;
+    }
+
+    .skill-item p{
+        font-size: 2em;
+    }
+
+    .skill-row .skills-list {
+        height: 32em;
+        width: 17em;
+        gap: 2em;
+        justify-content: center;
+    }
+
+    .tech{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .language-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+    }
+
+    .language-bg{
+        width: 32em;
+    }
+    .language-bg p {
+        padding: 1em;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    
+
+  }
+
+
+  @media (min-width: 1024px){
+
+    body {
+        padding-bottom: 40px; /* Adjust this value to the footer's height + some extra padding if needed */
+    }
+    main{
+        margin: 1em 2em;
+    }
+   
+    .skill-row{
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill-item img {
+        width: 5em;
+    }
+
+    .skill-item p{
+        font-size: 2em;
+    }
+
+    .skill-row .skills-list {
+        height: 32em;
+        width: 21em;
+        gap: 2em;
+        justify-content: center;
+    }
+
+    .tech{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .language-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+    }
+
+    .language-bg{
+        width: 42em;
+    }
+    .language-bg p {
+        padding: 1em;
+        font-size: 2em;
+        text-align: center;
+    }
+
+  }
