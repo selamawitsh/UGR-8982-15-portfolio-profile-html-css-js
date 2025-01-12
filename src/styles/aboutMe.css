@@ -317,6 +317,13 @@ footer {
     display: none;
   }
 
+  .image img {
+    width: 33em;
+    height: 29em;
+    border-radius: 25%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
   footer {
     position: fixed;
     left: 0;
