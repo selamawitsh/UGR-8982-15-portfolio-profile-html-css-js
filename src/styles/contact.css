@@ -79,7 +79,6 @@ body, html {
   
   .nav-links a {
     width: 100px;
-    background:linear-gradient(45deg, #E5FFFE, #99FDFA);
     color: #006461;
     text-decoration: none; 
     padding: 10px; 
@@ -222,7 +221,7 @@ body, html {
     .nav-links a {
       width: auto; /* Adjust for horizontal layout */
       background-color: transparent; /* No background for desktop */
-      color: #333;
+      color: #006461;
       padding: 0; /* Remove padding for desktop links */
       font-size: 22px;
       font-weight: bold;
@@ -247,6 +246,10 @@ body, html {
    
   }
   
+  .nav-links a.active {
+    color: #001918; 
+    font-weight: bold;
+  }
 
   /* main-part */
 main {

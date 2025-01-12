@@ -79,7 +79,6 @@ header {
 
 .nav-links a {
   width: 100px;
-  background:linear-gradient(45deg, #E5FFFE, #99FDFA);
   color: #006461;
   text-decoration: none; 
   padding: 10px; 
@@ -114,6 +113,17 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a.active {
+  color: #001918; 
+  font-weight: bold;
 }
 
 /* Media Query for Mobile Portrait */
@@ -274,16 +284,16 @@ header {
     display: flex; 
     flex-direction: row;
     gap: 5em;
-    position: static; /* Reset positioning for desktop */
-    background-color: transparent; /* Remove mobile background */
-    padding: 0; /* Remove extra padding */
-    box-shadow: none; /* Remove shadow */
+    position: static; 
+    background-color: transparent; 
+    padding: 0; 
+    box-shadow: none; 
   }
 
   .nav-links a {
     width: auto; /* Adjust for horizontal layout */
     background-color: transparent; /* No background for desktop */
-    color: #333;
+    color: #006461;
     padding: 0; /* Remove padding for desktop links */
     font-size: 22px;
     font-weight: bold;
@@ -623,3 +633,6 @@ header {
   }
 
 }
+
+
+

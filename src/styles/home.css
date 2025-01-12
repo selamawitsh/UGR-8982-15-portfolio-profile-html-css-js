@@ -79,7 +79,6 @@ header {
 
 .nav-links a {
   width: 100px;
-  background:linear-gradient(45deg, #E5FFFE, #99FDFA);
   color: #006461;
   text-decoration: none; 
   padding: 10px; 
@@ -92,7 +91,10 @@ header {
   gap: 8px; 
   border: 1px solid transparent; 
 }
-
+.nav-links a.active {
+  color: #001918; 
+  font-weight: bold;
+}
 
 /* Media Query for Mobile Portrait */
 @media (max-width: 768px) and (orientation: portrait) {
@@ -222,7 +224,7 @@ header {
   .nav-links a {
     width: auto; /* Adjust for horizontal layout */
     background-color: transparent; /* No background for desktop */
-    color: #333;
+    color: #006461;
     padding: 0; /* Remove padding for desktop links */
     font-size: 22px;
     font-weight: bold;
@@ -307,7 +309,9 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
