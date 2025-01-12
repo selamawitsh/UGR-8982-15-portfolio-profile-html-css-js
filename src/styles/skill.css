@@ -311,6 +311,7 @@ footer {
     .nav-links a {
       width: auto; /* Adjust for horizontal layout */
       background:none;
+      
       background-color: transparent; /* No background for desktop */
       color: #006461;
       padding: 0; /* Remove padding for desktop links */
