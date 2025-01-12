@@ -1,0 +1,596 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #E5FFFE;
+}
+body {
+  font-family: 'Inter', sans-serif; /* Default font for the body */
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; /* Use Inter for headings */
+  color: #001918;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for paragraphs */
+  color: #006461;
+}
+
+header {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: relative; /* Allows positioning of nav-links */
+}
+
+/* Logo Styles */
+.logo {
+  order: 0;
+}
+.logo img {
+  height: 40px; /* Adjust size as needed */
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2; /* Ensure it's above the nav-links */
+}
+.social-links a{
+  text-decoration: none;
+  color: linear-gradient(45deg, #00C9C2, #006461);
+  font-size: 24px;
+}
+/* Hide nav-links by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #006461; 
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.links i {
+  background: linear-gradient( #00C9C2, #006461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+/* Show nav-links when active */
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a {
+  width: 100px;
+  background:linear-gradient(45deg, #E5FFFE, #99FDFA);
+  color: #006461;
+  text-decoration: none; 
+  padding: 10px; 
+  border-radius: 8px; 
+  font-size: 16px; 
+  font-weight: bold;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  border: 1px solid transparent; 
+}
+
+/* Media Query for Mobile Portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    margin-right: auto;
+    order: 1;
+  }
+
+  .hamburger-menu {
+    order: 2;
+  }
+
+    /* Social Links Section */
+  .social-links {
+    display: none; /* Optionally hide on smaller screens */
+  }
+}
+
+/* Media Query for Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 1; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+}
+/* tablet */
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 3; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    order: 0; /* Logo comes first */
+    margin-right: auto; /* Push logo to the left */
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: block;
+    order: 3; /* Hamburger comes last (on the right) */
+    margin-left: auto; /* Push hamburger to the right */
+  }
+}
+
+
+/* Target Desktops (min-width 1024px) */
+@media (min-width: 1024px) {
+  .links{
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .nav-links {
+    display: flex; 
+    flex-direction: row;
+    gap: 5em;
+    position: static; /* Reset positioning for desktop */
+    background-color: transparent; /* Remove mobile background */
+    padding: 0; /* Remove extra padding */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  .nav-links a {
+    width: auto; /* Adjust for horizontal layout */
+    background-color: transparent; /* No background for desktop */
+    color: #333;
+    padding: 0; /* Remove padding for desktop links */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: none; /* Remove border for desktop */
+    transition: color 0.3s;
+    flex-grow: 1;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin: 0 auto; /* Center social links horizontally */
+
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+ 
+}
+/* General styling for the main and sections */
+
+main {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Section Styling */
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 10em;
+  gap: 2em;
+}
+
+
+/* Article Styling */
+.project {
+  background:linear-gradient(180deg, #006461,#33FCF5) ;
+  overflow: hidden; 
+}
+
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-image img {
+  width: 100%;
+  height: 24em;
+  display: block;
+  object-fit: contain;
+  border-radius: 2em;
+}
+
+.card-text {
+  padding: 15px 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Button Styling */
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 15px 20px;
+  gap: 16em;
+}
+
+.card-button .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background:linear-gradient(180deg,#001918,#006461);
+  border: none;
+  border-radius: 100px;
+  
+}
+
+
+
+@media (max-width: 768px) and (orientation:portrait){
+  .projects {
+    display: flex;
+    margin: 0em;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%; 
+  }
+
+  .card-image img {
+    height: auto;
+    object-fit: contain; 
+  }
+
+  .card-button {
+    gap: 1em; 
+  }
+  
+}
+
+@media (max-width: 768px) and (orientation:landscape){
+  .projects {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 12px;
+    gap: 1px;
+    width: 100%;
+  }
+
+  .project {
+    background: linear-gradient(180deg, #006461, #33FCF5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    margin: 1em;
+    border-radius: 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row; /* Items (image, text, buttons) in a row */
+    width: 100%;
+    padding: 1em;
+  }
+  
+  .card-image {
+    /* flex: 1;  */
+    padding-right: 1em;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 20em; /* Adjust height based on your design */
+    object-fit: contain;
+    border-radius: 2em;
+  }
+  
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content */
+    padding-left: 1em;
+  }
+  
+  .card-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1em; /* Space between text and buttons */
+  }
+  
+  .card-button {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+  }
+  
+  .card-button .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(180deg, #001918, #006461);
+    border: none;
+    border-radius: 100px;
+  }
+  
+  /* Adjust the layout for mobile screens */
+
+
+    /* .project {
+      flex-direction: column; 
+    } */
+    
+   
+  }
+  
+
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 12px;
+    gap: 1px;
+    width: 100%;
+  }
+
+  .project {
+    background: linear-gradient(180deg, #006461, #33FCF5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    margin: 1em;
+    border-radius: 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row; /* Items (image, text, buttons) in a row */
+    width: 100%;
+    padding: 1em;
+  }
+  
+  .card-image {
+    /* flex: 1;  */
+    padding-right: 1em;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 20em; /* Adjust height based on your design */
+    object-fit: contain;
+    border-radius: 2em;
+  }
+  
+  .card-text {
+    flex: 2; /* The text will take up more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content */
+    padding-left: 1em;
+  }
+  
+  .card-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1em; /* Space between text and buttons */
+  }
+  
+  .card-button {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+  }
+  
+  .card-button .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(180deg, #001918, #006461);
+    border: none;
+    border-radius: 100px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1023px) and (orientation: landscape){
+  .projects {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 12px;
+    gap: 1px;
+    width: 100%;
+  }
+
+  .project {
+    background: linear-gradient(180deg, #006461, #33FCF5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    margin: 1em;
+    border-radius: 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row; /* Items (image, text, buttons) in a row */
+    width: 100%;
+    padding: 1em;
+  }
+  
+  .card-image {
+    /* flex: 1;  */
+    padding-right: 1em;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 20em; /* Adjust height based on your design */
+    object-fit: contain;
+    border-radius: 2em;
+  }
+  
+  .card-text {
+    flex: 2; /* The text will take up more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content */
+    padding-left: 1em;
+  }
+  
+  .card-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1em; /* Space between text and buttons */
+  }
+  
+  .card-button {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+  }
+  
+  .card-button .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(180deg, #001918, #006461);
+    border: none;
+    border-radius: 100px;
+  }
+}
+
+@media (min-width: 1024px){
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 28em);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%; 
+  }
+
+  .card-image img {
+    height: auto;
+    object-fit: contain; 
+    max-width: 12em;
+  }
+
+  
+  .card-button {
+    gap: 1em; 
+  }
+
+}

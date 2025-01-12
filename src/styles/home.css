@@ -202,9 +202,6 @@ header {
   }
 }
 
-
-
-
 /* Target Desktops (min-width 1024px) */
 @media (min-width: 1024px) {
   .links{
