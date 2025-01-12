@@ -523,7 +523,7 @@ desktop */
   align-items: center;
 }
 
-about-me {
+.about-me {
   display: flex;
   align-items: center;
   max-width: 100%;
