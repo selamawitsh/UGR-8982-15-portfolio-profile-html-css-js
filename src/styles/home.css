@@ -79,6 +79,7 @@ header {
 
 .nav-links a {
   width: 100px;
+  background:linear-gradient(45deg, #e5fffe, #99FDFA);
   color: #006461;
   text-decoration: none; 
   padding: 10px; 
@@ -223,6 +224,7 @@ header {
 
   .nav-links a {
     width: auto; /* Adjust for horizontal layout */
+    background: none;
     background-color: transparent; /* No background for desktop */
     color: #006461;
     padding: 0; /* Remove padding for desktop links */

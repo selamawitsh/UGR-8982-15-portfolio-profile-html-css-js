@@ -79,6 +79,7 @@ header {
 
 .nav-links a {
   width: 100px;
+  background:linear-gradient(45deg, #e5fffe, #99FDFA);
   color: #006461;
   text-decoration: none; 
   padding: 10px; 
@@ -225,6 +226,7 @@ header {
 
   .nav-links a {
     width: auto;
+    background: none;
     background-color: transparent; 
     padding: 0; 
     font-size: 22px;
